@@ -1,19 +1,16 @@
-from django.shortcuts import render, HttpResponse
+from django.shortcuts import render
 from .forms import SignUpForm
 from django.http import HttpResponseRedirect
-from django.shortcuts import redirect
-
 
 from django.contrib.auth.forms import authenticate
 from django.contrib.auth import login
 from django.urls import reverse
 
 
-
 def home(request):
-    if request.method=="POST":
+    if request.method == "POST":
         form = SignUpForm(request.POST)
-        
+
         if form.is_valid():
             form.save()
             username = form.cleaned_data.get('username')
@@ -21,12 +18,12 @@ def home(request):
             user = authenticate(username=username, password=password)
             login(request, user)
             return HttpResponseRedirect(reverse("question:home"))
-            
-    else:  
+
+    else:
         form = SignUpForm()
-        
-        
+
     return render(request, 'home/home.html', {'form': form})
 
+
 def about(request):
-    return render (request, 'home/about.html')
+    return render(request, 'home/about.html')
