@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>question</title>
+</head>
+
+<body>
+
+
+<form action="" method="POST" novalidate>
+    {% csrf_token %}
+    {% for question in questions %}
+        <input type="hidden" name="question_id" value="{{ question.id }}"/>
+
+        {{ question }}
+        {{ form.answer }}
+        {% if form.errors %}
+            {% for field in form %}
+                {% for error in field.errors %}
+                    <li>
+                        {{ error }}
+                    </li>
+                {% endfor %}
+            {% endfor %}
+        {% endif %}
+    {% endfor %}
+
+
+    <input type="submit" name="sub">
+
+</form>
+
+
+</body>
+</html>
