@@ -1,0 +1,75 @@
+@import url("//cdn.web-fonts.ge/fonts/arial-geo-italic/css/arial-geo-italic.min.css");
+
+
+body{
+    background-image: url("/static/image/back.jpg");
+    background-size: cover;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.inp{
+    position: relative;
+    background: #f2f2f2;
+    display: block;
+    margin: 15px;
+    width: 95%;
+    height: 30px;
+    outline: 0;
+    border: 0;
+    text-align: center;
+    
+}
+
+.reg_box{
+    background-image: linear-gradient( 95.2deg,  rgba(173,252,234,1) 26.8%, rgba(192,229,246,1) 64% );
+    position: relative;
+    width: auto;
+    margin: 0 auto;
+    padding: 40px;
+    padding-left: 15px;
+    padding-bottom: 50px;
+    margin-top: 10px;
+    border-radius: 20px;
+    
+}
+
+
+.btn{
+    position: absolute;
+    left: 90px;
+    width: 40%;
+    padding-bottom: 5px;
+   
+    border-radius: 2px;
+    border: 0;
+    cursor: pointer;
+    font-size: 17px;
+    margin-top: 10px;
+    background-color: #6b0f1a;
+    background-image: linear-gradient(315deg, #6b0f1a 0%, #b91372 74%);
+    font-family: "Arial GEO Italic", sans-serif;    
+}
+.frm{
+    float: right;
+    right: 20px;
+    margin-left: 10px;
+    position: relative;
+    width: 20%;
+    margin: 0 auto;
+    
+}
+
+.errorlist{
+    position: relative;
+    background-color: #6B5B95;
+    text-align: center;
+    list-style: none;
+    left: 10px;
+}
+
+
+
